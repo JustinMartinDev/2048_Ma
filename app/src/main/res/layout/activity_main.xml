@@ -4,18 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <RelativeLayout
         android:id="@+id/fenetre"
         android:layout_weight="4"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        >
-
-    </RelativeLayout>
+        android:layout_height="0dp"/>
 
 
+        <GridView
+            android:id="@+id/gameGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:columnWidth="45dp"
+            android:gravity="center"
+            android:horizontalSpacing="5dp"
+            android:numColumns="4"
+            android:verticalSpacing="2dp"/>
 
 
 </android.support.constraint.ConstraintLayout>
