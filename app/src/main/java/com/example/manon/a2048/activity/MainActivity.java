@@ -23,11 +23,8 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
     Display ecran;
     int largeur ,longeur ;
-    
+
     ListView lvCountry;
-    RelativeLayout fenetre;
-    private GridView gameGridView;
-    GameElementAdapter adapter;
 
     GestureDetector gestureDector;
 
@@ -39,17 +36,18 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         super.onCreate(savedInstanceState);
         GestureDetector gestureDector = new GestureDetector(this, this);
         gestureDector.setOnDoubleTapListener(this);
-
         ecran = getWindowManager().getDefaultDisplay();
         largeur = ecran.getWidth();
         longeur = ecran.getHeight();
         setContentView(R.layout.activity_main);
-        fenetre = findViewById(R.id.fenetre);
 
-        gameGridView = findViewById(R.id.gameGridView);
+        GameGridView gameGridView = (GameGridView) findViewById(R.id.gameGridView);
 
-        adapter = new GameElementAdapter(getApplicationContext());
-        gameGridView.setAdapter(adapter);
+        //adapter = new GameElementAdapter(getApplicationContext());
+        GameElement.initHeightElement(largeur, this);
+        GameElementAdapter gameElementAdapter = new GameElementAdapter(this);
+        gameGridView.setAdapter(gameElementAdapter);
+        Log.e("zere", gameGridView.getCount()+"");
 
 
 
@@ -115,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                     // going backwards: pushing stuff to the right
                     if (downXValue < currentX) {
                         Log.v("", "right");
-                        fusion(16, 4, -4, 4, 0, -1, -1);
+                       // fusion(16, 4, -4, 4, 0, -1, -1);
                     }
 
                     // going forwards: pushing stuff to the left

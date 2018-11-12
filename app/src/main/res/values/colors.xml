@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="color2Card">#6d6d65</color>
+    <color name="color2card">#6d6d65</color>
     <color name="color4card">#F7DB8D</color>
     <color name="color8card">#D2A016</color>
     <color name="color16card">#99CB78</color>
@@ -14,6 +14,7 @@
     <color name="color512card">#b1528a</color>
     <color name="color1024card">#827b9f</color>
     <color name="color2048card">#8e6db6</color>
+    <color name="black">#000000</color>
 
 
 </resources>
